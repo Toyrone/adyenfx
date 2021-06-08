@@ -132,7 +132,6 @@ export default {
     formatCurrency(money) {
       if (money) {
         const newMoney = new Intl.NumberFormat().format(Number(money));
-        console.log(newMoney);
         return newMoney;
       }
       return '';
