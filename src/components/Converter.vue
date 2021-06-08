@@ -66,7 +66,7 @@ export default {
     };
   },
   async created() {
-    this.handleRatesFetch = () => this.fetchBaseRates(this.defaultCurrency);
+    (this.handleRatesFetch = () => this.fetchBaseRates(this.defaultCurrency))();
 
     setInterval(this.handleRatesFetch, 120000);
     /**
