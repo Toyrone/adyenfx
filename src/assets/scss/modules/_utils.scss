@@ -1,0 +1,108 @@
+// padding and margin utility classes e.g .p-* && .m-*
+@for $i from 0 through 10 {
+	.p {
+		&-#{$i} {
+			padding: #{$i}rem !important;
+		}
+		&y-#{$i} {
+			padding-top: #{$i}rem !important;
+			padding-bottom: #{$i}rem !important;
+		}
+		&x-#{$i} {
+			padding-left: #{$i}rem !important;
+			padding-right: #{$i}rem !important;
+		}
+		&t-#{$i} {
+			padding-top: #{$i}rem !important;
+		}
+		&b-#{$i} {
+			padding-bottom: #{$i}rem !important;
+		}
+		&l-#{$i} {
+			padding-left: #{$i}rem !important;
+		}
+		&r-#{$i} {
+			padding-right: #{$i}rem !important;
+		}
+	}
+	.m {
+		&-#{$i} {
+			margin: #{$i}rem !important;
+		}
+		&y-#{$i} {
+			margin-top: #{$i}rem !important;
+			margin-bottom: #{$i}rem !important;
+		}
+		&x-#{$i} {
+			margin-left: #{$i}rem !important;
+			margin-right: #{$i}rem !important;
+		}
+		&t-#{$i} {
+			margin-top: #{$i}rem !important;
+		}
+		&b-#{$i} {
+			margin-bottom: #{$i}rem !important;
+		}
+		&l-#{$i} {
+			margin-left: #{$i}rem !important;
+		}
+		&r-#{$i} {
+			margin-right: #{$i}rem !important;
+		}
+	}
+	.b {
+		&-#{$i} {
+			border: #{$i}px solid rgba(151, 147, 147, 0.15) !important;
+		}
+		&y-#{$i} {
+			border-top: #{$i}px solid rgba(151, 147, 147, 0.15) !important;
+			border-bottom: #{$i}px solid rgba(151, 147, 147, 0.15) !important;
+		}
+		&x-#{$i} {
+			border-left: #{$i}px solid rgba(151, 147, 147, 0.15) !important;
+			border-right: #{$i}px solid rgba(151, 147, 147, 0.15) !important;
+		}
+		&t-#{$i} {
+			border-top: #{$i}px solid rgba(151, 147, 147, 0.15) !important;
+		}
+		&b-#{$i} {
+			border-bottom: #{$i}px solid rgba(151, 147, 147, 0.15) !important;
+		}
+		&l-#{$i} {
+			border-left: #{$i}px solid rgba(151, 147, 147, 0.15) !important;
+		}
+		&r-#{$i} {
+			border-right: #{$i}px solid rgba(151, 147, 147, 0.15) !important;
+		}
+	}
+}
+
+.auto {
+	&-mt {
+		margin-top: auto;
+	}
+	&-mb {
+		margin-bottom: auto;
+	}
+	&-ml {
+		margin-left: auto;
+	}
+	&-mr {
+		margin-right: auto;
+	}
+	&-my {
+		margin: 0 auto;
+	}
+}
+
+.text {
+	&-green {
+		color: #1ecaab;
+	}
+	&-red {
+		color: #fc7777;
+	}
+	&-grey {
+		color: #a7a7a7;
+	}
+}

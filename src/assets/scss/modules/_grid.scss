@@ -1,0 +1,36 @@
+.grid {
+  display: grid;
+  @include query('mobile') {
+    display: block;
+  }
+  &__layout {
+    @extend .grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 1rem;
+    @include grid-generator(12);
+    &--10 {
+      grid-template-columns: repeat(10, 1fr);
+      @include grid-generator(10);
+    }
+    @for $i from 1 through 5 {
+      &.gap-#{$i} {
+        grid-gap: #{$i}rem;
+      }
+    }
+  }
+  &--no-gap {
+    grid-gap: 0;
+  }
+}
+
+.container {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 1rem;
+  width: 100%;
+  position: relative;
+}
+
+.flex {
+  display: flex;
+}
