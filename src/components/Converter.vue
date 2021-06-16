@@ -92,7 +92,9 @@ export default {
   watch: {
     /* eslint-disable space-before-function-paren */
     'country.to': function() {
-      this.currency.to = Number(this.currency.from * this.currentRate).toFixed(2);
+      if (this.currentRate) {
+        this.currency.to = Number(this.currency.from * this.currentRate).toFixed(2);
+      } else this.currency.to = 0;
     },
     'currency.from': function(value) {
       this.currency.to = Number(value * this.currentRate).toFixed(2);
@@ -134,6 +136,7 @@ export default {
   },
   filters: {
     formatCurrency(money) {
+      console.log(money);
       if (money) {
         const newMoney = new Intl.NumberFormat().format(Number(money));
         return newMoney;
