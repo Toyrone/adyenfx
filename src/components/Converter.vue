@@ -129,7 +129,7 @@ export default {
      * Handles conversion on form change
      */
     switchCurrencies() {
-      [this.currency.from, this.currency.to] = [this.currency.to, this.currency.from];
+      [this.country.from, this.country.to] = [this.country.to, this.country.from];
     },
   },
   filters: {
