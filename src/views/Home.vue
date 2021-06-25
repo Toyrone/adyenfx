@@ -45,7 +45,7 @@
         <div class="hero__meta">
           <dl v-if="baseRates.rates" class="hero__meta-lists">
             <div>
-              <dt class="hero__meta-label">EUR/USD</dt>
+              <dt class="hero__meta-label">{{ baseRates.base }}/USD</dt>
               <dd class="hero__meta-value">
                 <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -60,7 +60,7 @@
               </dd>
             </div>
             <div>
-              <dt class="hero__meta-label">EUR/GBP</dt>
+              <dt class="hero__meta-label">{{ baseRates.base }}/GBP</dt>
               <dd class="hero__meta-value">
                 <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -75,7 +75,7 @@
               </dd>
             </div>
             <div>
-              <dt class="hero__meta-label">EUR/CAD</dt>
+              <dt class="hero__meta-label">{{ baseRates.base }}/CAD</dt>
               <dd class="hero__meta-value">
                 <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -90,7 +90,7 @@
               </dd>
             </div>
             <div>
-              <dt class="hero__meta-label">EUR/JPY</dt>
+              <dt class="hero__meta-label">{{ baseRates.base }}/JPY</dt>
               <dd class="hero__meta-value">
                 <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -105,7 +105,7 @@
               </dd>
             </div>
             <div>
-              <dt class="hero__meta-label">EUR/NGN</dt>
+              <dt class="hero__meta-label">{{ baseRates.base }}/NGN</dt>
               <dd class="hero__meta-value">
                 <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -121,7 +121,7 @@
             </div>
           </dl>
           <div>
-            <a class="hero-link" href=""
+            <a class="hero-link" target="_blank" href="https://adyen.com"
               >Learn More
               <svg
                 class="icon"
@@ -170,6 +170,14 @@ export default {
   },
   computed: {
     ...mapGetters({ baseRates: 'getBaseRates' }),
+  },
+  watch: {
+    baseRates: {
+      handler(value, oldValue) {
+        console.log(value, oldValue);
+      },
+      deep: true
+    }
   },
   components: {
     Converter,

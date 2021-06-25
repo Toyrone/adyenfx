@@ -59,7 +59,7 @@ export default {
   data() {
     return {
       selectedCurrency: {},
-      defaultCurrency: 'EUR',
+      defaultCurrency: 'USD',
       baseCurrency: '',
       currency: {
         from: 1000,

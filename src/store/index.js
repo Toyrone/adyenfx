@@ -27,9 +27,9 @@ export default new Vuex.Store({
      * Fetches rates from API
      *
      */
-    async fetchBaseRates({ commit }) {
+    async fetchBaseRates({ commit }, currency) {
       try {
-        const response = await api.get(`latest?access_key=${process.env.VUE_APP_RATES_KEY}`);
+        const response = await api.get(`latest?access_key=${process.env.VUE_APP_RATES_KEY}&base=${currency}`);
         commit('saveBaseRate', response.data);
         return Promise.resolve(response);
       } catch (error) {
